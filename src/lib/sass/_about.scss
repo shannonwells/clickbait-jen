@@ -1,0 +1,25 @@
+.about--title {
+    margin-left: 0;
+}
+
+.about--new--item {
+  list-style: none;
+  margin-left: -40px;
+  @media (min-width: $breakpoint-tablet) {
+    margin-left: -20px;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.new--item--name {
+  @media (min-width: $breakpoint-tablet) {
+    width: 200px;
+    flex-grow: 0;
+    flex-shrink: 0;
+  }
+}
+
+.about--answer {
+  margin-bottom: 2em;
+}

@@ -1,0 +1,23 @@
+.hidden{
+  display: none !important;
+}
+
+.mobile--hidden {
+  display: none;
+  @media (min-width: $breakpoint-tablet) {
+    display: initial;
+  }
+}
+
+.center {
+  text-align: center;
+}
+
+.button--bullet {
+  padding: 2px 2px 2px 1px;
+  display: none;
+  @media (min-width: $breakpoint-tablet) {
+    display: revert;
+  }
+}
+
