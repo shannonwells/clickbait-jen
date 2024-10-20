@@ -37,8 +37,6 @@
   @import '$lib/sass/_mixins';
 
   .fitbGame--Form {
-    font-size: large;
-    margin: 0 auto;
     @media (min-width: $breakpoint-tablet) {
       margin-left: 0;
       display: flex;
@@ -46,6 +44,8 @@
       align-items: center;
       max-width: 600px;
     }
+    font-size: large;
+    margin: 0 auto;
   }
 
   button.fitbGame--Reload {
@@ -53,13 +53,13 @@
   }
 
   .fitbGame--HasError {
+    @media (min-width: $breakpoint-tablet) {
+      text-align: left;
+    }
     margin-top: 22px;
     height: fit-content;
     font-weight: bold;
     text-align: center;
-    @media (min-width: $breakpoint-tablet) {
-      text-align: left;
-    }
   }
 
   .fitbGame__Blank--missing {
@@ -67,23 +67,23 @@
   }
 
   .fitbGame--Labels {
-    display: flex;
-    flex-direction: column;
     @media (min-width: $breakpoint-tablet) {
       margin-top: 22px;
       display: table;
     }
+    display: flex;
+    flex-direction: column;
   }
 
   .fitbGame--Label {
-    margin-bottom: 1em;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     @media (min-width: $breakpoint-tablet) {
       display: table-row;
       margin-bottom: 22px;
     }
+    margin-bottom: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .fitbGame--LabelText, .fitbGame--Blank {
@@ -94,23 +94,27 @@
   }
 
   .fitbGame--LabelText {
-    font-weight: bold;
     @media (min-width: $breakpoint-tablet) {
       padding: 6px 12px;
       text-align: right;
     }
+    font-weight: bold;
   }
 
   .fitbGame--Pointer {
-    display: none;
     @media (min-width: $breakpoint-tablet) {
       display: revert;
       margin-right: 12px;
       font-size: x-large;
     }
+    display: none;
   }
 
   .fitbGame--Blank {
+    @media (min-width: $breakpoint-tablet) {
+      font-size: revert;
+      width: 300px;
+    }
     margin-top: .5em;
     padding: 4px;
     text-align: left;
@@ -118,19 +122,15 @@
     width: 200px;
     border-radius: 10px;
     border-color: transparent;
-    @media (min-width: $breakpoint-tablet) {
-      font-size: revert;
-      width: 300px;
-    }
   }
 
   button.fitbGame--Submit {
+    @media (min-width: $breakpoint-tablet) {
+      margin: 22px auto;
+    }
     display: block;
     margin: 0 auto 22px auto;
     @include candy-button;
     padding: 12px 52px;
-    @media (min-width: $breakpoint-tablet) {
-      margin: 22px auto;
-    }
   }
 </style>
